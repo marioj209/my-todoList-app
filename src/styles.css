@@ -1,1 +1,147 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.cont-body{
+    width: 100%;
+    height: 100vh;
+    background: rgb(255,244,225);
+    background: linear-gradient(45deg, rgba(255,244,225,1) 0%, 
+rgba(189,76,66,1) 99%);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.cont-list{
+    width: 620px;
+    height: 820px;
+    background: #9e3b42;
+    border-radius: 20px;
+    box-shadow: 22px 22px 42px -7px #4c1e1a;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 55px;
+    row-gap: 10px;
+}
+.cont-header{
+    border-radius: 15px;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    margin: 15px 25px;
+}
+.cont-header button{
+    border:0;
+    background-image: linear-gradient(150deg,#4f0304,#630106,#a1372e);
+    border-radius: 8px;
+    color:white;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor:pointer;
+    transition: .3s;
+    justify-content: center;
+    font-weight:600;
+    
+}
+.cont-header button:active{
+    scale: .9;
+}
+.cont-main{
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #5c0010;
+}
+.cont-main::-webkit-scrollbar{
+    width: 10px;
+    background-color:#2b0000 ;
+    border-radius:5px
+}
+
+.cont-main::-webkit-scrollbar-thumb{
+    background-color:#5c0010 ;
+    border-radius:5px
+}
+.cont-main p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin:0;
+}
+.cont-main .list-group{
+    margin:0;
+    padding: 5px 10px;
+}
+.cont-main .list-group .list-group-item{
+    list-style: none;
+    padding:7px 10px;
+    color: white;
+    border:1px solid #5c0010;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.cont-main .list-group :hover{
+    border-color: rgb(189,76,66);
+    transition: .5s;
+}
+.list-group-item{
+    position:relative;
+}
+.list-group-item button{
+    border:none;
+    background: none;
+    outline:inherit;
+    cursor:pointer;
+    position:absolute;
+    right:5px;
+    top:8px;
+    color:#e87565;
+    border-radius: 50%;
+    font-size:15px;
+}
+.list-group-item input[type=checkbox]{
+    display:none;
+}
+.list-group-item input[type=checkbox] + label{
+    cursor:pointer;
+    padding-left: 25px;
+    border:none;
+    position: relative;
+}
+.list-group-item label::before{
+    content:'';
+    border: 2px solid rgb(189,76,66);
+    border-radius: 8px;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    margin-right:5px;
+    position:absolute;
+    left:0;
+}
+.list-group-item input[type=checkbox]:checked + label::before{
+    background-color:rgb(189,76,66);
+    padding-bottom: 0;
+    transition: .3s;
+}
+.footer{
+    border-radius: 20px;
+    display: grid;
+}
+.footer input{
+    border:0;
+    outline:none;
+    background: none;
+    height:30px;
+    font-size: 16px;
+    border-radius:25px;
+    margin:5px 10px;
+    border: 2px solid #5c0010;
+    padding-left: 15px;
+    color:white;
+}
+.valid-input input{
+    background-color:rgb(189,76,66) ;
+}

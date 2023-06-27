@@ -1,0 +1,5 @@
+<div class="footer"[class.valid-input]='txtInput.invalid'>
+    <input type="text" [formControl]="txtInput"
+    (keydown.enter)="save()"
+    placeholder="INGRESE TAREA">
+</div>
